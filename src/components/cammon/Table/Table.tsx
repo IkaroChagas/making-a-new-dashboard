@@ -23,7 +23,9 @@ export const Table = <T,>({ columns, data, handleEdit, handleDelete }: TableProp
                     {columns.map((column, index) => (
                         <th key={index} className={styles.th}>{column.header}</th>
                     ))}
-                    {(handleEdit || (handleDelete) && <th className={styles.th}>Ações</th>}
+                    {(handleEdit || handleDelete) ? (
+                        <th className={styles.th}>Ações</th>
+                    ) : null}
                 </tr>
             </thead>
 

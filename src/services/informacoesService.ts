@@ -1,48 +1,47 @@
-import api from './api'
+import api from './api';
 
-export interface Experiencia {
-    id: number,
-    titulo: string,
-    descricao: string,
-    tipo: string,
-    anoInicio: number | "",
-    anoFim: number | "",
+export interface Informacoes {
+    id?: number;
+    foto: string;
+    nome: string;
+    cargo: string;
+    resumo: string;
 }
 
-export const createExperiencia = async (experiencia: Experiencia) => {
-    const response = await api.post('/experiencias', experiencia);
+// export async function updateInfomacoes(informacoes: Informacoes): Promise<Informacoes> {
+//     const response = await api.put<Informacoes>('/informacoes/1', informacoes);
+//     return response.data;
+// }
+
+// export async function getInformacoes(): Promise<Informacoes> {
+//     const response = await api.get<Informacoes>('/informacoes/1');
+//     return response.data;
+// }
+
+export const createInformacoes = async (informacoes: Informacoes): Promise<Informacoes> => {
+    const response = await api.post<Informacoes>('/informacoes', informacoes);
     return response.data;
 }
 
-export const getExperiencia = async () => {
-    const response = await api.get<Experiencia>('/experiencias');
+export const updateInfomacoes = async (informacoes: Informacoes): Promise<Informacoes> => {
+    const response = await api.put<Informacoes>('/informacoes/1', informacoes);
     return response.data;
 }
 
-export const getExperienciaById = async (id: number) => {
-    const response = await api.get<Experiencia>(`/experiencias/${id}`);
+export const getInformacoes = async (): Promise<Informacoes> => {
+    const response = await api.get<Informacoes>('/informacoes/1');
     return response.data;
 }
 
-export const getExperienciaByTipo = async (tipo: string) => {
-    const response = await api.get<Experiencia[]>(`/experiencias?tipo=${tipo}`);
+export const deleteInformacoes = async (): Promise<Informacoes> => {
+    const response = await api.delete<Informacoes>('/informacoes/1');
     return response.data;
 }
 
-export const updateExperiencia = async (experiencia: Experiencia) => {
-    const response = await api.put<Experiencia>(`/experiencias/${experiencia.id}`, experiencia);
-    return response.data;
-}
-
-export const deleteExperiencia = async (id: number) => {
-    const response = await api.delete<Experiencia>(`/experiencias/${id}`);
-    return response.data;
-}
-
-export const createOrUpdateExperiencia = async (experiencia: Experiencia) => {
-    if (experiencia.id) {
-        return await createExperiencia(experiencia);
+export const createOrUpdateInformacoes = async (informacoes: Informacoes): Promise<Informacoes> => {
+    if (!informacoes.id) {
+        return await createInformacoes(informacoes);
     } else {
-        return await updateExperiencia(experiencia);
+        return await updateInfomacoes(informacoes);
     }
 }

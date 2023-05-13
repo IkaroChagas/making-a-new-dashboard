@@ -1,4 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { User } from "../services/userService";
 
@@ -16,6 +15,7 @@ interface Props {
 
 const AuthContext = createContext<AuthContextProps>({} as AuthContextProps);
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider: React.FC<Props> = ({ children }) => {

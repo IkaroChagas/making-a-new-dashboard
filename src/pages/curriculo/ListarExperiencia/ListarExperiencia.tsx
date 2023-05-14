@@ -19,7 +19,7 @@ const ListarExperiencia: React.FC = () => {
 
     useEffect(() => {
         fetchExperiencia()
-    }, [])
+    })
 
     const handleEdit = (experiencia: Experiencia) => {
         navigate("/curriculo/experiencia/atualizar", { state: experiencia })

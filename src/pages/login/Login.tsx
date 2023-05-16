@@ -1,3 +1,4 @@
+
 import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import styles from './login.module.css'
@@ -6,14 +7,20 @@ import Input from "../../components/forms/Input/Input";
 import Button from "../../components/cammon/Button/Button";
 import Title from "../../components/cammon/Title/Title";
 import { useAuth } from "../../contexts/AuthContext";
-import { LoginData, login as loginService } from "../../services/authService";
+import { login as loginService } from "../../services/authService";
+import React from "react";
+
+interface LoginValues {
+    email: string;
+    password: string;
+}
 
 
 const Login = () => {
     const navigate = useNavigate();
     const { login } = useAuth();
 
-    const initialValues: LoginData = {
+    const initialValues: LoginValues = {
         email: "",
         password: "",
     }
@@ -27,9 +34,9 @@ const Login = () => {
             .required("A senha é obrigatória"),
     });
 
-    const onSubmit = async (values: LoginData) => {
+    const onSubmit = async (values: LoginValues) => {
         try {
-            const user = await loginService(values);
+            const user = await loginService(values.email, values.password);
             login(user);
             navigate("/")
         } catch (error) {

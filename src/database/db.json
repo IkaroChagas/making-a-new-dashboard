@@ -1,0 +1,96 @@
+{
+  "usuarios": [
+    {
+        "id": 1,
+        "email": "teste@email.com",
+        "password": "teste@123"
+    }
+  ],
+  "informacoes": [
+    {
+      "id": 1,
+      "foto": "",
+      "nome": "",
+      "cargo": "",
+      "resumo": ""
+    }
+  ],
+  "experiencias": [
+    {
+      "id": 1,
+      "titulo": "Engenharia mecânica na UFCG",
+      "descricao": "Idk it just works",
+      "tipo": "academico",
+      "anoInicio": "2020",
+      "anoFim": "2021"
+    },
+    {
+      "id": 2,
+      "titulo": "Ciência da computação na UFCG",
+      "descricao": "The boring one",
+      "tipo": "academico",
+      "anoInicio": "2021",
+      "anoFim": "2021"
+    },
+    {
+      "id": 3,
+      "titulo": "Ciência da computação na UFCG",
+      "descricao": "The boring one",
+      "tipo": "academico",
+      "anoInicio": "2023",
+      "anoFim": "2023"
+    },
+    {
+      "id": 4,
+      "titulo": "Tecnico em informática",
+      "descricao": "The boring one",
+      "tipo": "profissional",
+      "anoInicio": "2020",
+      "anoFim": "2023"
+    },
+    {
+      "id": 5,
+      "titulo": "Produtor de conteúdo na Fluency Be",
+      "descricao": "The boring one",
+      "tipo": "profissional",
+      "anoInicio": "2023",
+      "anoFim": "2023"
+    }
+  ],
+  "portfolio": [
+    {
+      "id": 1,
+      "link": "https://www.instagram.com/p/CDchkJMHjTt/",
+      "image": "https://cf.shopee.com.my/file/5a8542574c47b76e3887c64d1a95edfe",
+      "title": "Penguin"
+    },
+    {
+      "id": 2,
+      "link": "https://i.imgur.com/9U5uB6t.jpg",
+      "image": "https://i.imgur.com/9U5uB6t.jpg",
+      "title": "yee"
+    },
+    {
+      "id": 3,
+      "link": "https://i.imgur.com/9U5uB6t.jpg",
+      "image": "https://i.imgur.com/9U5uB6t.jpg",
+      "title": "Test",
+      "description": "yooooooooooooooooooo dude this is lit"
+    },
+    {
+      "id": 4,
+      "link": "https://i.imgur.com/9U5uB6t.jpg",
+      "image": "https://i.imgur.com/9U5uB6t.jpg",
+      "title": "just testing something out",
+      "description": "",
+      "descricao": "It works i guess  idk dude"
+    },
+    {
+      "id": 5,
+      "link": "https://i.imgur.com/9U5uB6t.jpg",
+      "image": "https://i.imgur.com/9U5uB6t.jpg",
+      "title": "testing again",
+      "description": "I'm tired of this"
+    }
+  ]
+}

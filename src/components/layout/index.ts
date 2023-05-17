@@ -1,1 +1,1 @@
-export { default } from './laytout';
+export { default } from './Laytout';

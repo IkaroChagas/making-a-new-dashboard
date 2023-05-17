@@ -8,7 +8,7 @@ interface InfoBoxProps {
     icon?: React.ReactNode;
 }
 
-const infoBox: React.FC<InfoBoxProps> = ({ title, value, icon }) => {
+const InfoBox: React.FC<InfoBoxProps> = ({ title, value, icon }) => {
 
     return (
         <div className={styles.infoBox}>
@@ -21,4 +21,4 @@ const infoBox: React.FC<InfoBoxProps> = ({ title, value, icon }) => {
     )
 };
 
-export default infoBox;
+export default InfoBox;

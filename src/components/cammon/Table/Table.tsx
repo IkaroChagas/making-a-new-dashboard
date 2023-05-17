@@ -23,9 +23,9 @@ export const Table = <T,>({ columns, data, handleEdit, handleDelete }: TableProp
                     {columns.map((column, index) => (
                         <th key={index} className={styles.th}>{column.header}</th>
                     ))}
-                    {(handleEdit || handleDelete) ? (
+                    {(handleEdit || handleDelete) &&
                         <th className={styles.th}>Ações</th>
-                    ) : null}
+                    }
                 </tr>
             </thead>
 
@@ -33,13 +33,19 @@ export const Table = <T,>({ columns, data, handleEdit, handleDelete }: TableProp
                 {data.map((item, index) => (
                     <tr key={index}>
                         {columns.map((column, columnIndex) => (
-                            column.accessor == "image" ?
+                            column.accessor === "image" ? (
                                 <td key={columnIndex} className={styles.td}>
                                     <img src={item[column.accessor] as string} alt='Imagem' />
                                 </td>
-                                :
-                                <td key={columnIndex} className={styles.id}>{item[column.accessor]} </td>
-                        ))}
+                            ) : (
+                                <td key={columnIndex} className={styles.td}>
+                                    {typeof item[column.accessor] === 'string' ? (
+                                        item[column.accessor] as string
+                                    ) : (
+                                        String(item[column.accessor])
+                                    )}
+                                </td>
+                            )))}
                         {(handleEdit || handleDelete) && (
                             <td className={styles.td}>
                                 {handleEdit && <button onClick={() => handleEdit(item)}>Editar</button>}

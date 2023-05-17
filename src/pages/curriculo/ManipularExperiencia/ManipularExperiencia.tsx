@@ -21,7 +21,6 @@ const ManipularExperiencia: React.FC = () => {
         tipo: "",
         anoInicio: "",
         anoFim: "",
-        id: 0
     }
 
     const validationSchema = Yup.object().shape({
@@ -39,6 +38,7 @@ const ManipularExperiencia: React.FC = () => {
             navigate("/curriculo/experiencia/listar");
             alert("Formulário enviador com sucesso!");
         } catch (error) {
+            console.log(error);
             alert("Ocorreu um erro!")
         }
     }
@@ -69,6 +69,7 @@ const ManipularExperiencia: React.FC = () => {
                     <Input
                         label="Ano Inicio"
                         name="anoInicio"
+                        type="number"
                         errors={errors.anoInicio}
                         touched={touched.anoInicio}
                     />
@@ -76,6 +77,7 @@ const ManipularExperiencia: React.FC = () => {
                     <Input
                         label="Ano Fim"
                         name="anoFim"
+                        type="number"
                         errors={errors.anoFim}
                         touched={touched.anoFim}
                     />

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Table, Column } from "../../../components/cammon/Table";
 import { Experiencia, deleteExperiencia, getExperiencia } from "../../../services/experienciaService";
+import React from "react";
 
 
 const ListarExperiencia: React.FC = () => {

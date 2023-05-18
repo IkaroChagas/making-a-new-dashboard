@@ -36,6 +36,6 @@ export const createOrUpdateProjeto = async (projeto: Projeto): Promise<Projeto> 
     if (!projeto.id) {
         return await createProjeto(projeto);
     } else {
-        return await deleteProjeto(projeto);
+        return await updateProjeto(projeto);
     }
 }

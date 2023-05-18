@@ -6,32 +6,8 @@
       "password": "teste@123"
     }
   ],
-  "informacoes": [
-    {
-      "foto": "https://github.com/IkaroChagas.png",
-      "nome": "Ikaro Chagas",
-      "cargo": "dev",
-      "resumo": "aaqaq",
-      "id": 1
-    }
-  ],
+  "informacoes": [],
   "experiencia": [
-    {
-      "id": 9,
-      "titulo": "Densevolver de Software",
-      "descricao": "Programador",
-      "tipo": "profissional",
-      "anoInicio": "2023",
-      "anoFim": "2025"
-    },
-    {
-      "id": 10,
-      "titulo": "Comeia Academy",
-      "descricao": "Estudante",
-      "tipo": "academico",
-      "anoInicio": "2023",
-      "anoFim": "2023"
-    },
     {
       "id": 11,
       "titulo": "Atendente de Telemarketing",

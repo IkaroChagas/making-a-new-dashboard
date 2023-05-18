@@ -11,7 +11,7 @@ const ListarExperiencia: React.FC = () => {
 
     const fetchExperiencia = async () => {
         try {
-            const experiencia = await getExperiencia();
+            const experiencias = await getExperiencia();
             setExperiencias(experiencias)
         } catch (error) {
             alert("Erro ao buscar experiências");

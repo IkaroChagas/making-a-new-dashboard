@@ -39,6 +39,14 @@
       "tipo": "profissional",
       "anoInicio": "2023",
       "anoFim": "2023"
+    },
+    {
+      "titulo": "Cadastro de alunos",
+      "descricao": "aqqqqqqqqqqqqqqq",
+      "tipo": "profissional",
+      "anoInicio": 2020,
+      "anoFim": 2023,
+      "id": 12
     }
   ],
   "portfolio": [

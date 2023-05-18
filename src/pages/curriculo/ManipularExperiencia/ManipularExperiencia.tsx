@@ -41,7 +41,7 @@ const ManipularExperiencia: React.FC = () => {
             console.log(error);
             alert("Ocorreu um erro!")
         }
-    }
+    };
 
     return (
         <Form
@@ -61,7 +61,7 @@ const ManipularExperiencia: React.FC = () => {
 
                     <Input
                         label="Titulo"
-                        name="title"
+                        name="titulo"
                         errors={errors.titulo}
                         touched={touched.titulo}
                     />

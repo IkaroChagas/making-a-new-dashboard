@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-    baseURL: "https://json-server-jexi.onrender.com"
+    baseURL: "https://site-pessoal-api.onrender.com/"
 })
 
 export default api

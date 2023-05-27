@@ -7,7 +7,7 @@ import Input from "../../components/forms/Input/Input";
 import Button from "../../components/cammon/Button/Button";
 import Title from "../../components/cammon/Title/Title";
 import { useAuth } from "../../contexts/AuthContext";
-import { login as loginService } from "../../services/authService";
+import { User, login as loginService } from "../../services/authService";
 import React from "react";
 
 interface LoginValues {
@@ -34,7 +34,7 @@ const Login = () => {
             .required("A senha é obrigatória"),
     });
 
-    const onSubmit = async (values: LoginValues) => {
+    const onSubmit = async (values: User) => {
         try {
             const user = await loginService(values.email, values.password);
             login(user);
